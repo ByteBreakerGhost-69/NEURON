@@ -138,3 +138,25 @@ This roadmap is a **plan, not a list of completed features**. Only Stage 1 is in
 ## Experiments and results
 
 No experiments have been run and no results exist yet. This section will be filled in only with results actually produced by running the code. See `experiments/README.md` for the planned note-taking convention.
+
+## Evaluation and Experiments
+
+NEURON includes test-set evaluation, per-class classification metrics,
+a confusion matrix, and visualization of incorrectly classified
+samples.
+
+To reproduce the evaluation artifacts:
+
+```
+PYTHONPATH=src python experiments/visualize_evaluation.py
+```
+
+Generated artifacts are stored in `results/`. The detailed baseline
+configuration, metrics, limitations, and proposed next experiments
+are documented in [`docs/experiment-log.md`](docs/experiment-log.md).
+
+Run the automated tests with:
+
+```
+PYTHONPATH=src pytest -q
+```
